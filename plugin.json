@@ -1,9 +1,9 @@
 {
 	"name": "nera-voluntary-code-plugin",
 	"slug": "nera-voluntary-code-plugin",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"homepage": "https://github.com/Nera-Marketing/nera-voluntary-code-plugin",
-	"download_url": "https://github.com/Nera-Marketing/nera-voluntary-code-plugin/releases/download/v1.0.0/nera-voluntary-code-plugin-1.0.0.zip",
+	"download_url": "https://github.com/Nera-Marketing/nera-voluntary-code-plugin/releases/download/v1.0.1/nera-voluntary-code-plugin-1.0.1.zip",
 
 	"author": "Nera",
 	"author_homepage": "https://github.com/Nera-Marketing",
@@ -11,7 +11,7 @@
 	"requires": "6.0",
 	"tested": "6.8",
 	"requires_php": "7.4",
-	"last_updated": "2026-06-24 00:00:00",
+	"last_updated": "2026-06-29 05:24:41",
 
 	"upgrade_notice": "Initial release.",
 
