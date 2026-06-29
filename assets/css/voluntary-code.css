@@ -1,0 +1,172 @@
+/**
+ * Nera – Voluntary Code Commitment
+ * Plugin stylesheet for .nera-vc-* components.
+ * Uses CSS custom properties with literal fallbacks (theme tokens) so it works
+ * without the theme's Tailwind build. DO NOT use Tailwind utility classes here.
+ *
+ * Token reference (defined by nera-competitions-standard theme):
+ *   --color-primary          default #1313ec
+ *   --color-primary-dark     default #0d0da8
+ *   --color-background-dark  default #101022
+ *   --color-surface          default #fff
+ *   --color-text-primary     default #0d0d1b
+ *   --color-text-secondary   default #64748b
+ *   --color-gray-200         default #e5e7eb
+ */
+
+/* =============================================================================
+   Footer badge
+   ============================================================================= */
+
+.nera-vc-footer-badge {
+	width: 100%;
+	padding: 0.625rem 1rem;
+	background: var(--color-background-dark, #101022);
+	border-top: 1px solid var(--color-gray-200, #e5e7eb);
+	text-align: center;
+	font-size: 0.75rem;
+	line-height: 1.5;
+	color: var(--color-text-secondary, #64748b);
+}
+
+.nera-vc-footer-badge__link {
+	color: var(--color-primary, #1313ec);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	font-weight: 600;
+}
+
+.nera-vc-footer-badge__link:hover,
+.nera-vc-footer-badge__link:focus {
+	color: var(--color-primary-dark, #0d0da8);
+}
+
+.nera-vc-footer-badge__icon {
+	margin-right: 0.25rem;
+	text-decoration: none;
+}
+
+/* =============================================================================
+   Page layout
+   ============================================================================= */
+
+.nera-vc-page {
+	max-width: 56rem;
+	margin: 0 auto;
+	padding: 1rem 0 2rem;
+	color: var(--color-text-primary, #0d0d1b);
+}
+
+.nera-vc-intro {
+	margin-bottom: 1rem;
+	line-height: 1.7;
+	color: var(--color-text-secondary, #64748b);
+	font-size: 1.0625rem;
+}
+
+.nera-vc-govuk {
+	margin: 0 0 2rem;
+}
+
+.nera-vc-govuk__link {
+	display: inline-block;
+	font-weight: 600;
+	padding: 0.6rem 1rem;
+	border-radius: 0.5rem;
+	background: var(--color-primary, #1313ec);
+	color: #fff;
+	text-decoration: none;
+}
+
+.nera-vc-govuk__link:hover,
+.nera-vc-govuk__link:focus {
+	background: var(--color-primary-dark, #0d0da8);
+	color: #fff;
+}
+
+/* =============================================================================
+   Sections
+   ============================================================================= */
+
+.nera-vc-section {
+	margin-bottom: 2.5rem;
+}
+
+.nera-vc-section__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 0 0 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--color-primary, #1313ec);
+	color: var(--color-text-primary, #0d0d1b);
+}
+
+/* =============================================================================
+   Measure cards
+   ============================================================================= */
+
+.nera-vc-measures {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.nera-vc-measure {
+	background: var(--color-surface, #fff);
+	border: 1px solid var(--color-gray-200, #e5e7eb);
+	border-left: 4px solid var(--color-primary, #1313ec);
+	border-radius: 0.5rem;
+	padding: 1rem 1.25rem;
+}
+
+.nera-vc-measure__title {
+	display: block;
+	font-weight: 700;
+	font-size: 1.0625rem;
+	margin-bottom: 0.25rem;
+	color: var(--color-text-primary, #0d0d1b);
+}
+
+.nera-vc-measure__body {
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	color: var(--color-text-secondary, #64748b);
+}
+
+.nera-vc-measure__body p {
+	margin: 0;
+}
+
+.nera-vc-measure__body p + p {
+	margin-top: 0.375rem;
+}
+
+.nera-vc-measure__link {
+	color: var(--color-primary, #1313ec);
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.nera-vc-measure__link:hover,
+.nera-vc-measure__link:focus {
+	color: var(--color-primary-dark, #0d0da8);
+}
+
+/* =============================================================================
+   Responsive — narrow viewports
+   ============================================================================= */
+
+@media (max-width: 640px) {
+	.nera-vc-page {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.nera-vc-section__title {
+		font-size: 1.25rem;
+	}
+}

@@ -1,0 +1,5 @@
+/node_modules/
+/nera-voluntary-code-plugin-*.zip
+/nera-voluntary-code-*.zip
+.DS_Store
+*.bak
