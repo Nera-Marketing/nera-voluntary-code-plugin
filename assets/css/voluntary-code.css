@@ -15,35 +15,103 @@
  */
 
 /* =============================================================================
-   Footer badge
+   Footer badge — sitewide Voluntary Code commitment (below theme footer)
    ============================================================================= */
 
 .nera-vc-footer-badge {
 	width: 100%;
-	padding: 0.625rem 1rem;
 	background: var(--color-background-dark, #101022);
 	border-top: 1px solid var(--color-gray-200, #e5e7eb);
-	text-align: center;
-	font-size: 0.75rem;
-	line-height: 1.5;
-	color: var(--color-text-secondary, #64748b);
+}
+
+.nera-vc-footer-badge__inner {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 0.75rem 1rem;
+	display: flex;
+	justify-content: center;
 }
 
 .nera-vc-footer-badge__link {
-	color: var(--color-primary, #1313ec);
-	text-decoration: underline;
-	text-underline-offset: 2px;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.625rem;
+	max-width: 100%;
+	padding: 0.45rem 1rem 0.45rem 0.875rem;
+	border: 1px solid rgba(255, 255, 255, 0.22);
+	border-radius: 9999px;
+	background: rgba(255, 255, 255, 0.04);
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 0.8125rem;
 	font-weight: 600;
+	line-height: 1.4;
+	text-decoration: none;
+	transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .nera-vc-footer-badge__link:hover,
-.nera-vc-footer-badge__link:focus {
-	color: var(--color-primary-dark, #0d0da8);
+.nera-vc-footer-badge__link:focus-visible {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.38);
+	color: #fff;
+	outline: none;
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary, #1313ec) 30%, transparent);
 }
 
 .nera-vc-footer-badge__icon {
-	margin-right: 0.25rem;
-	text-decoration: none;
+	width: 1rem;
+	height: 1rem;
+	flex-shrink: 0;
+	color: var(--color-primary, #1313ec);
+}
+
+.nera-vc-footer-badge__text {
+	text-align: left;
+}
+
+.nera-vc-footer-badge__chevron {
+	width: 0.875rem;
+	height: 0.875rem;
+	flex-shrink: 0;
+	opacity: 0.55;
+	transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.nera-vc-footer-badge__link:hover .nera-vc-footer-badge__chevron,
+.nera-vc-footer-badge__link:focus-visible .nera-vc-footer-badge__chevron {
+	opacity: 0.9;
+	transform: translateX(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.nera-vc-footer-badge__link,
+	.nera-vc-footer-badge__chevron {
+		transition: none;
+	}
+
+	.nera-vc-footer-badge__link:hover .nera-vc-footer-badge__chevron,
+	.nera-vc-footer-badge__link:focus-visible .nera-vc-footer-badge__chevron {
+		transform: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.nera-vc-footer-badge__inner {
+		padding-top: 0.875rem;
+		padding-bottom: 0.875rem;
+	}
+
+	.nera-vc-footer-badge__link {
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+		padding: 0.625rem 1rem;
+	}
+
+	.nera-vc-footer-badge__text {
+		text-align: center;
+		flex: 1 1 auto;
+	}
 }
 
 /* =============================================================================
@@ -51,8 +119,9 @@
    ============================================================================= */
 
 .nera-vc-page {
-	max-width: 56rem;
-	margin: 0 auto;
+	max-width: 100%;
+	width: 100%;
+	margin: 0;
 	padding: 1rem 0 2rem;
 	color: var(--color-text-primary, #0d0d1b);
 }
@@ -161,11 +230,6 @@
    ============================================================================= */
 
 @media (max-width: 640px) {
-	.nera-vc-page {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
 	.nera-vc-section__title {
 		font-size: 1.25rem;
 	}
