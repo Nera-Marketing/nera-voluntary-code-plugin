@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: nera-voluntary-code-plugin
+ * Plugin Name: Nera – Voluntary Code
  * Plugin URI: https://github.com/Nera-Marketing/nera-voluntary-code-plugin
  * Description: Publishes the operator's "Our commitment to player protection" page (UK Voluntary Code of Good Practice for Prize Draw Operators, clause 3.4 – Public Disclosure). Auto-creates an editable page listing the measures in place across Player Protections, Transparency and Accountability, with an adherence statement, a GOV.UK link, and a sitewide footer badge. Content is admin-editable via ACF under Theme Settings → Nera Features.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Nera
  * Text Domain: nera-voluntary-code-plugin
  * Requires at least: 6.0
@@ -18,7 +18,7 @@ use YahnisElsts\PluginUpdateChecker\v5p5\Vcs\GitHubApi;
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'NERA_VC_VERSION', '1.0.1' );
+define( 'NERA_VC_VERSION', '1.0.2' );
 define( 'NERA_VC_PLUGIN_FILE', __FILE__ );
 define( 'NERA_VC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'NERA_VC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
